@@ -1,0 +1,13 @@
+services:
+  api:
+    build: ./src/Backend.Api
+    ports:
+      - "5080:8080"
+  web:
+    build: ./src/Frontend.AngularJS
+    ports:
+      - "8080:80"
+    environment:
+      - VITE_API_BASE=http://api:8080
+    depends_on:
+      - api

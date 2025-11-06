@@ -1,0 +1,17 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+
+# Node
+node_modules/
+dist/
+.cache/
+
+# OS
+.DS_Store
+
+# Env
+*.env
+secrets.*
