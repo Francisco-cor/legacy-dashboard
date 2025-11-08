@@ -32,6 +32,13 @@
           </tr>
         </tbody>
       </table>
+      <div class="d-flex align-items-center gap-2 mt-2">
+        <button class="btn btn-outline-secondary btn-sm" ng-click="vm.prev()" ng-disabled="vm.page===1 || vm.loading">Anterior</button>
+        <span class="text-muted">Página {{vm.page}} · Total {{vm.total}}</span>
+        <button class="btn btn-outline-secondary btn-sm" ng-click="vm.next()" ng-disabled="vm.loading || (vm.page*vm.pageSize)>=vm.total">Siguiente</button>
+        <span class="ms-auto" ng-if="vm.loading">Cargando…</span>
+        <span class="text-danger ms-auto" ng-if="vm.error">{{vm.error}}</span>
+      </div>
     </div>
   </body>
 </html>

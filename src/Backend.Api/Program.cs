@@ -8,8 +8,17 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(opts =>
     opts.UseSqlite(builder.Configuration.GetConnectionString("Db") ?? "Data Source=app.db"));
 
-var app = builder.Build();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("web", p =>
+        p.WithOrigins("http://localhost:5173")
+         .AllowAnyHeader()
+         .AllowAnyMethod());
+});
 
+
+var app = builder.Build();
+app.UseCors("web");
 app.UseSwagger();
 app.UseSwaggerUI();
 
