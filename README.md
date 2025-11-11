@@ -1,10 +1,10 @@
-# 🧩 Legacy Dashboard — .NET 8 Minimal API + AngularJS 1.x + SQLite
+# Legacy Dashboard — .NET 8 Minimal API + AngularJS 1.x + SQLite
 
 **Goal:** Simulate a legacy modernization scenario with a clean, testable, containerized stack.
 
 ---
 
-## 🚀 Stack
+## Stack
 
 | Layer | Technology | Description |
 |-------|-------------|-------------|
@@ -14,7 +14,7 @@
 
 ---
 
-## ⚙️ Run Locally (no Docker)
+## Run Locally (no Docker)
 
 ### Backend
 ```bash
@@ -35,7 +35,7 @@ npm run dev
 
 ---
 
-## 🐳 Run with Docker
+## Run with Docker
 
 ```bash
 docker compose up --build
@@ -47,7 +47,7 @@ Both containers communicate through the internal Docker network (`api` and `web`
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 |---------|-----------|-------------|
@@ -59,7 +59,7 @@ Both containers communicate through the internal Docker network (`api` and `web`
 
 ---
 
-## 🧪 Tests
+## Tests
 
 ### Backend (.NET)
 ```bash
@@ -75,7 +75,7 @@ Both test suites are minimal, focused on validating key integration and initiali
 
 ---
 
-## 🏗️ Architecture Diagram
+## Architecture Diagram
 
 ```mermaid
 flowchart LR
@@ -86,7 +86,7 @@ flowchart LR
 
 ---
 
-## 🧠 Design Decisions
+## Design Decisions
 
 - **Minimal API** for low boilerplate and performance.  
 - **SQLite** chosen to avoid external DB setup and simplify portability.  
@@ -97,12 +97,12 @@ flowchart LR
 
 ---
 
-## 🧾 CI Status
+## CI Status
 
 ![CI](https://github.com/Francisco-cor/legacy-dashboard/actions/workflows/ci.yml/badge.svg)
 
 ---
 
-## 🪪 License
+## License
 
 MIT — 2025 © Francisco Cordero Aguero
